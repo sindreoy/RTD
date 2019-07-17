@@ -11,9 +11,10 @@ This was later abandoned in favour of "Qt" in order to to adhere to the system u
 ## Dependencies
 
 ```
+sudo apt install python-pip libgtk-3-dev
 sudo apt install python-{setuptools,matplotlib}
-sudo pip install {minimalmodubs,wxPython,wxmplot}
-
+sudo pip install {minimalmodbus,wxPython,wxmplot}
+```
 
 ## Modules
 
