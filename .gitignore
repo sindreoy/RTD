@@ -1,0 +1,18 @@
+# Exclude all files by default
+**/*
+# Include all directories and Explicitly include relevant file-types
+!**/
+# Include gitignore
+!.gitignore
+# Scripting languages
+!*.py
+# Misc
+!*.svg
+!*.png
+# Document markup files
+!*.md
+!*.txt
+!*.tex
+!*.bib
+!*.sty
+!*.cls
