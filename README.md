@@ -11,9 +11,9 @@ This was later abandoned in favour of "Qt" in order to to adhere to the system u
 ## Dependencies
 
 ```
-sudo apt install python-{setuptools,matplotlib}
-sudo pip install {minimalmodubs,wxPython,wxmplot}
-
+sudo apt install libgtk-3-dev python-{pip,setuptools,matplotlib}
+sudo pip install {minimalmodbus,wxPython,wxmplot}
+```
 
 ## Modules
 
@@ -23,11 +23,11 @@ python setup.py build
 sudo python setup.py install
 ```
 
-the experiment can now be run as a module:
+The experiment can now be run as a module:
 
 ```
 python -m RTD
 ```
 
-This is the current setup, but the "setuptools" option "entry_point" should probably be used in thr future.
+This is the current setup, but the "setuptools" option "entry_point" should probably be used in the future.
 
