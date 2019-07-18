@@ -28,7 +28,7 @@ __license__ = "GPL.v3"
 __date__      = "$Date: 2015-06-23 (Tue, 23 Jun 2015) $"
 
 import wx
-from wx.lib.pubsub import pub
+from pubsub import pub
 from collections import defaultdict
 from random import random
 

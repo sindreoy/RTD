@@ -30,7 +30,7 @@ __license__ = "GPL.v3"
 __date__      = "$Date: 2015-06-23 (Tue, 23 Jun 2015) $"
 
 import wx
-from wx.lib.pubsub import pub # pub.sendMessage('identifier', arg=var) pub.subscribe(method, 'identifier')
+from pubsub import pub # pub.sendMessage('identifier', arg=var) pub.subscribe(method, 'identifier')
 from time import sleep, time
 
 # from FellesLab.Utils.SupportClasses import ExtendedRef, GuiUpdater
@@ -321,54 +321,6 @@ class FellesButton(wx.Button):
         Method for calling button programatically, i.e. button()
         """
         self.OnButtonClicked(self)
-
-# =============================== Class ====================================== #
-class FellesComboBox(wx.wx.ComboBox):
-    """
-    Class
-    """
-    # ------------------------------- Method --------------------------------- #
-    def __init__(self, parent = None, *args, **kwargs):
-
-        self.source = kwargs['source']
-        self.target = kwargs['target']
-        del kwargs['target']
-        del kwargs['source']
-
-        self.arg = None
-        if kwargs.has_key('arg'):
-            self.arg = kwargs['arg']
-            del kwargs['arg']
-
-        if not kwargs.has_key('name'):
-            kwargs['name'] = self.source.GetName()
-
-        if not kwargs.has_key('max'):
-            kwargs['max'] = 1
-
-        if not kwargs.has_key('min'):
-            kwargs['min'] = 0
-
-        if not kwargs.has_key('initial'):
-            kwargs['initial'] = kwargs['min']
-
-        if not kwargs.has_key('value'):
-            kwargs['value'] = '%f' %(kwargs['initial'])
-
-        if not kwargs.has_key('inc'):
-            kwargs['inc'] = 0.01
-
-        super(FellesTextInput, self).__init__(parent, *args, **kwargs)
-
-#        self.Bind(wx.EVT_SPINCTRL, self.OnSetpointChange)
-        self.Bind(wx.EVT_SPINCTRLDOUBLE, self.OnSetpointChange)
-
-    # ------------------------------- Method --------------------------------- #
-    def OnSetpointChange(self, event):
-        if not self.arg:
-            self.target(event.GetEventObject().GetValue())
-        else:
-            self.target(self.arg, event.GetEventObject().GetValue())
 
 
 # =============================== Class ====================================== #

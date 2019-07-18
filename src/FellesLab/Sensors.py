@@ -32,7 +32,7 @@ from math import floor, ceil
 from collections import defaultdict
 
 import wx
-from wx.lib.pubsub import pub
+from pubsub import pub
 
 
 try :
