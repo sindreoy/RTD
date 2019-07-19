@@ -12,7 +12,7 @@ This was later abandoned in favour of "Qt" in order to to adhere to the system u
 
 ```
 sudo apt install libgtk-3-dev python-{pip,setuptools,matplotlib}
-sudo pip install {minimalmodbus,wxPython,wxmplot}
+sudo pip install {pathlib2,minimalmodbus,wxPython,wxmplot}
 ```
 
 ## Modules
